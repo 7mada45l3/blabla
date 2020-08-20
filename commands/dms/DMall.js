@@ -80,7 +80,7 @@ class DMallCommand extends commando.Command {
                 console.log(`Waited ${timeout}ms.\t|${i + 1}|\tDMing ${member.user.username}`);
             }
             try {
-                member.send(`${msg} \n #${timeout}`);
+                member.send(`${msg} \n ${user.mention}`);
                 successcount++;
             } catch (error) {
                 console.log(`Failed to send DM! ` + error)

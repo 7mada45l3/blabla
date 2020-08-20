@@ -22,8 +22,6 @@ class DMallCommand extends commando.Command {
         let msg = "";
         let OnlineMembers = [];
         let interest;
-        const adminPermissions = new Permissions('ADMINISTRATOR');
-
         let botusr = dmGuild.members.find(o => o.id == this.client.user.id)
 
 

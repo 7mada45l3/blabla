@@ -25,10 +25,6 @@ class DMallCommand extends commando.Command {
         const adminPermissions = new Permissions('ADMINISTRATOR');
 
         let botusr = dmGuild.members.find(o => o.id == this.client.user.id)
-        if (!botusr.hasPermission(adminPermissions)) {
-            console.log(`WARNING: Bot is not properly configured with administrative permissions.`);
-        }
-
 
 
         // First we use fetchMembers to make sure all members are cached

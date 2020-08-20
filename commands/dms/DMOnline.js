@@ -40,16 +40,6 @@ class DMallCommand extends commando.Command {
                 OnlineMembers.push(member);
             }
         }
-
-        message.reply('you now have *ten minutes* to send the message that you would like to massDM here.')
-        // Await !vote messages
-        const filter = m =>  message.author.id === m.author.id;
-        // Errors: ['time'] treats ending because of the time limit as an error
-        message.channel.awaitMessages(filter, { max: 1, time: 60000, errors: ['time'] })
-            .then(collected => msg = collected.content)
-            .catch(message.reply('you did not enter any input!'));
-        
-        
         message.reply('you now have *ten minutes* to send the message that you would like to massDM here.').then(() => {
             const filter = m => message.author.id === m.author.id;
         

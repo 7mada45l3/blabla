@@ -19,7 +19,6 @@ class DMroleCommand extends commando.Command {
     async run(message, args){
         let role = message.mentions.roles.first();
         let msg = message.content;
-        const adminPermissions = new Permissions('ADMINISTRATOR');
 
         let botusr = dmGuild.members.find(o => o.id == this.client.user.id)
         if (!botusr.hasPermission(adminPermissions)) {
